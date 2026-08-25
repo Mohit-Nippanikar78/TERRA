@@ -4,7 +4,7 @@ import { useRole } from "../../context/RoleContext";
 import { uploadFileToPinata, uploadJSONToPinata } from "../../utils/ipfs";
 import { getContract } from "../../utils/contract";
 
-function BuilderRegister({ wallet, isRegistrationPage = false }) {
+function BuilderRegister({ isRegistrationPage = false }) {
   const navigate = useNavigate();
   const { registerRole } = useRole();
   const [companyName, setCompanyName] = useState("");

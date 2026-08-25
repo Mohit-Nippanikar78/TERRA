@@ -28,6 +28,12 @@ function Dashboard() {
   const roleSwitcherRef = useRef(null);
   const navigate = useNavigate();
 
+  const [prevRole, setPrevRole] = useState(selectedRole);
+  if (selectedRole !== prevRole) {
+    setPrevRole(selectedRole);
+    setPage(getDefaultPage());
+  }
+
   useEffect(() => {
     if (!wallet) {
       navigate('/login');
@@ -35,11 +41,6 @@ function Dashboard() {
       navigate('/select-role');
     }
   }, [wallet, selectedRole, navigate]);
-
-  // Update page when role changes
-  useEffect(() => {
-    setPage(getDefaultPage());
-  }, [selectedRole]);
 
   const disconnectWallet = () => {
     disconnect();

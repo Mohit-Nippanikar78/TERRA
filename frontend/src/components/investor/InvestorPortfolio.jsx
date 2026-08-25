@@ -1,4 +1,4 @@
-const InvestorPortfolio = ({ wallet }) => {
+const InvestorPortfolio = () => {
   // Sample portfolio data for charts
   const totalInvested = 1223000;
   const totalCurrentValue = 1366400;

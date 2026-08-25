@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const InvestorWallet = ({ wallet }) => {
+const InvestorWallet = () => {
   const [selectedTab, setSelectedTab] = useState('payouts');
 
   const [payouts, setPayouts] = useState([

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const MyInvestments = ({ wallet }) => {
+const MyInvestments = () => {
   const navigate = useNavigate();
   const [selectedProperty, setSelectedProperty] = useState(null);
 

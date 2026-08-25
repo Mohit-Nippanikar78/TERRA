@@ -1,10 +1,9 @@
-import { useState } from 'react';
+  import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const BuilderPropertyListings = ({ wallet }) => {
+const BuilderPropertyListings = () => {
   const navigate = useNavigate();
   const [showAddModal, setShowAddModal] = useState(false);
-  const [selectedProperty, setSelectedProperty] = useState(null);
   const [editingProperty, setEditingProperty] = useState(null);
   const [formData, setFormData] = useState({
     title: '',
